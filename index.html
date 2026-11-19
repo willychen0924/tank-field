@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#23322e"><title>坦克沙盤｜金鷹守衛戰</title>
+<link rel="stylesheet" href="style.css?v=hud2">
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">
+    <i aria-hidden="true"></i>
+    <div class="titles"><span>TANK FIELD</span><h1>金鷹守衛戰</h1></div>
+  </div>
+  <dl class="hud" aria-label="戰況">
+    <div><dt>基地</dt><dd id="base">完好</dd></div>
+    <div><dt>殘機</dt><dd id="lives">3</dd></div>
+    <div><dt>剩餘敵車</dt><dd id="remaining"></dd></div>
+    <div><dt>火力</dt><dd><span id="power" role="img" aria-label="1 級，共 3 級">★☆☆</span></dd></div>
+  </dl>
+</header>
+<section class="field" aria-label="戰場">
+  <canvas id="arena" tabindex="0" aria-label="坦克戰場，方向鍵或 WASD 移動，空白鍵射擊，P 暫停"></canvas>
+  <div class="callout" id="callout" hidden><h2 id="result"></h2><p id="reason"></p><button id="again">再玩一次</button></div>
+  <div id="note" role="status"></div>
+</section>
+<footer>
+  <div class="objective"><strong id="caption">守住金鷹基地</strong><span id="hint">擊破紅坦克，拾取星章提升射速</span></div>
+  <div class="keys"><span><kbd>WASD</kbd> 或 <kbd>方向鍵</kbd> 移動</span><span><kbd>空白鍵</kbd> 射擊</span><span><kbd>P</kbd> 暫停</span></div>
+  <button id="action">開始遊戲</button>
+</footer>
+<div class="touch" aria-label="觸控操作">
+  <div class="dpad"><button data-dir="0" aria-label="向上">▲</button><button data-dir="3" aria-label="向左">◀</button><button data-dir="2" aria-label="向下">▼</button><button data-dir="1" aria-label="向右">▶</button></div>
+  <button id="fire">射擊</button>
+</div>
+</main>
+<script src="meshes.js"></script><script src="stages.js"></script><script src="scenery.js"></script><script src="view.js?v=campaign"></script><script src="rules.js?v=campaign"></script><script src="play.js?v=campaign2"></script>
+</body></html>
